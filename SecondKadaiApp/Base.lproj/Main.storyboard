@@ -28,6 +28,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ic-5j-d4C"/>
                                     <segue destination="TqC-UG-Bcr" kind="show" id="lJo-1s-EjS"/>
                                 </connections>
                             </button>
@@ -37,9 +38,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ByJ-H2-ejY">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ByJ-H2-ejY">
                                 <rect key="frame" x="92" y="173" width="191" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Kpe-Kv-3Q7"/>
+                                    <constraint firstAttribute="width" constant="191" id="jqj-63-HTz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -47,12 +51,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Nk7-tK-SKb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="MkO-e6-fnf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ByJ-H2-ejY" secondAttribute="trailing" constant="92" id="W1A-gU-VSK"/>
+                            <constraint firstItem="ByJ-H2-ejY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="YM1-Mp-rKG"/>
                             <constraint firstItem="Nk7-tK-SKb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a63-sE-OpK"/>
                             <constraint firstItem="gCB-CF-JWk" firstAttribute="top" secondItem="Nk7-tK-SKb" secondAttribute="bottom" constant="100" id="fJ3-zp-uZn"/>
                             <constraint firstItem="gCB-CF-JWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iFJ-k8-oNx"/>
+                            <constraint firstItem="gCB-CF-JWk" firstAttribute="top" secondItem="ByJ-H2-ejY" secondAttribute="bottom" constant="58" id="szJ-lv-2rG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textfield" destination="ByJ-H2-ejY" id="K9v-R7-HUa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="h3k-R4-zX5"/>
                     <connections>
-                        <outlet property="textLabel" destination="dNx-MT-4Nu" id="DYq-S4-YQs"/>
+                        <outlet property="textlabel" destination="dNx-MT-4Nu" id="XqK-Dd-8OY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPK-YV-nA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
